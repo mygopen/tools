@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyGoPen 實用工具集 | 數位防身與創作</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                    },
+                    colors: {
+                        // MyGoPen 品牌綠色
+                        primary: {
+                            50: '#EDF7F2',
+                            100: '#D5EFE3',
+                            200: '#AEE2C9',
+                            300: '#86D4AF',
+                            400: '#5EB795',
+                            500: '#00B050', // 主要品牌色
+                            600: '#009945',
+                            700: '#00823B',
+                            800: '#006B30',
+                            900: '#005426',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .tool-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <!-- MyGoPen Logo -->
+                    <img src="https://ik.imagekit.io/mygopen/menu-logo.png?updatedAt=1767058877480" alt="MyGoPen Logo" class="h-10 w-auto">
+                    <span class="font-bold text-xl tracking-tight text-slate-900 hidden sm:block">實用工具集</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="https://www.mygopen.com/" target="_blank" class="text-slate-500 hover:text-primary-600 transition-colors text-sm font-medium">到 MyGoPen 首頁</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative overflow-hidden pt-16 pb-12 sm:pt-24 sm:pb-16">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+                您的數位 <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-400">工作與創作</span> 助手
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500">
+                這裡整理了 MyGoPen 開發的實用工具，協助您快速查證資訊、安全瀏覽網路，同時也能輕鬆進行社群創作與排版。
+            </p>
+        </div>
+    </div>
+
+    <!-- Tools Grid -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 w-full">
+        <div id="toolsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            
+            <!-- Tool 1: Cover Generator -->
+            <a href="https://cover.showcha.com/" target="_blank" class="tool-card group block bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:border-primary-200 relative overflow-hidden" data-keywords="封面 圖片 fb ig">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary-50 rounded-full blur-2xl group-hover:bg-primary-100 transition-colors opacity-70"></div>
+                <div class="relative">
+                    <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4 text-primary-600 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 group-hover:text-primary-700 transition-colors">封面圖產生器</h3>
+                    <p class="mt-2 text-sm text-slate-500 line-clamp-2">快速製作查核文章的首圖，版型可自訂標題文字和顏色以及上傳底圖的明度、飽和度。</p>
+                    <div class="mt-4 flex items-center text-xs font-medium text-primary-600 group-hover:text-primary-700">
+                        立即使用 
+                        <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Tool 2: Grid Tool -->
+            <a href="https://grid.showcha.com/" target="_blank" class="tool-card group block bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:border-primary-200 relative overflow-hidden" data-keywords="九宮格 切圖 ig 排版">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary-50 rounded-full blur-2xl group-hover:bg-primary-100 transition-colors opacity-70"></div>
+                <div class="relative">
+                    <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4 text-primary-600 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 group-hover:text-primary-700 transition-colors">圖片組合編輯器</h3>
+                    <p class="mt-2 text-sm text-slate-500 line-clamp-2">可以幫你將多張圖片合併起來，並且可以在局部位置加上馬賽克，還可以幫組圖加上編號。</p>
+                    <div class="mt-4 flex items-center text-xs font-medium text-primary-600 group-hover:text-primary-700">
+                        立即使用 
+                        <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Tool 3: Stamp Maker -->
+            <a href="https://stamp.showcha.com/" target="_blank" class="tool-card group block bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:border-primary-200 relative overflow-hidden" data-keywords="印章 電子章 浮水印">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary-50 rounded-full blur-2xl group-hover:bg-primary-100 transition-colors opacity-70"></div>
+                <div class="relative">
+                    <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4 text-primary-600 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 group-hover:text-primary-700 transition-colors">幫截圖蓋印章</h3>
+                    <p class="mt-2 text-sm text-slate-500 line-clamp-2">快速蓋一些定義好的印章，支援修改印章大小、透明度與上傳底圖樣式。</p>
+                    <div class="mt-4 flex items-center text-xs font-medium text-primary-600 group-hover:text-primary-700">
+                        立即使用 
+                        <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Tool 4: Anti-Scam (Featured) -->
+            <a href="https://mygopen.github.io/antiscam/" target="_blank" class="tool-card group block bg-white rounded-2xl p-6 shadow-md border border-primary-100 hover:border-primary-300 relative overflow-hidden ring-1 ring-primary-50" data-keywords="防詐騙 安全 檢查">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-primary-100 rounded-full blur-3xl group-hover:bg-primary-200 transition-colors opacity-80"></div>
+                <div class="relative">
+                    <span class="absolute top-0 right-0 bg-primary-100 text-primary-700 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wide">推薦</span>
+                    <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4 text-primary-600 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 group-hover:text-primary-700 transition-colors">防詐騙辨識工具</h3>
+                    <p class="mt-2 text-sm text-slate-500 line-clamp-2">提供即時的網址或訊息檢查，協助辨識潛在的網路詐騙風險，保護您的資訊安全。</p>
+                    <div class="mt-4 flex items-center text-xs font-bold text-primary-600 group-hover:text-primary-700">
+                        立即檢查 
+                        <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Tool 5: LINE Bot Statistics -->
+            <a href="https://gamebot.app/reports/testreport.asp" target="_blank" class="tool-card group block bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:border-primary-200 relative overflow-hidden" data-keywords="統計 謠言 LINE 機器人 數據">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary-50 rounded-full blur-2xl group-hover:bg-primary-100 transition-colors opacity-70"></div>
+                <div class="relative">
+                    <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4 text-primary-600 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 group-hover:text-primary-700 transition-colors">LINE機器人謠言統計</h3>
+                    <p class="mt-2 text-sm text-slate-500 line-clamp-2">即時查看網路上流傳的熱門謠言統計數據，掌握最新的詐騙趨勢與排行。</p>
+                    <div class="mt-4 flex items-center text-xs font-medium text-primary-600 group-hover:text-primary-700">
+                        查看統計 
+                        <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Tool 6: 1-on-1 Chat -->
+            <a href="https://admin.mgp.tw/otochat/" target="_blank" class="tool-card group block bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:border-primary-200 relative overflow-hidden" data-keywords="客服 真人 諮詢 對話">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary-50 rounded-full blur-2xl group-hover:bg-primary-100 transition-colors opacity-70"></div>
+                <div class="relative">
+                    <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4 text-primary-600 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 group-hover:text-primary-700 transition-colors">真人一對一客服系統</h3>
+                    <p class="mt-2 text-sm text-slate-500 line-clamp-2">提供專屬的一對一真人客服諮詢服務，協助解決您遇到的複雜問題與查證需求。</p>
+                    <div class="mt-4 flex items-center text-xs font-medium text-primary-600 group-hover:text-primary-700">
+                        進入系統 
+                        <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Tool 7: TDSDA Report System -->
+            <a href="https://netsafer.tw/" target="_blank" class="tool-card group block bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:border-primary-200 relative overflow-hidden" data-keywords="詐騙 舉報 報案 安全 TDSDA">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary-50 rounded-full blur-2xl group-hover:bg-primary-100 transition-colors opacity-70"></div>
+                <div class="relative">
+                    <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4 text-primary-600 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 group-hover:text-primary-700 transition-colors">TDSDA詐騙舉報系統</h3>
+                    <p class="mt-2 text-sm text-slate-500 line-clamp-2">進行網路詐騙案件的舉報，協助打擊網路犯罪，維護網路安全。</p>
+                    <div class="mt-4 flex items-center text-xs font-medium text-primary-600 group-hover:text-primary-700">
+                        立即舉報 
+                        <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                </div>
+            </a>
+
+             <!-- Placeholder for Future Tools -->
+             <div class="border-2 border-dashed border-slate-200 rounded-2xl p-6 flex flex-col items-center justify-center text-center text-slate-400 min-h-[200px] hover:border-primary-200 hover:text-primary-400 transition-colors">
+                <svg class="w-10 h-10 mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                </svg>
+                <span class="text-sm font-medium">更多實用工具開發中...</span>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0 flex items-center">
+                    <img src="https://ik.imagekit.io/mygopen/menu-logo.png?updatedAt=1767058877480" alt="MyGoPen Logo" class="h-6 w-auto mr-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <p class="text-sm text-slate-500">&copy; 2025 MyGoPen. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.facebook.com/mygopen" target="_blank" class="text-slate-400 hover:text-primary-600 transition-colors">
+                        <span class="sr-only">Facebook</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="https://www.mygopen.com/" target="_blank" class="text-slate-400 hover:text-primary-600 transition-colors">
+                        <span class="sr-only">Website</span>
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
