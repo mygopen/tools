@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyGoPen 實用工具集 | 數位工作與創作</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Noto Sans TC -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -51,12 +49,10 @@
 </head>
 <body class="text-slate-800 antialiased min-h-screen flex flex-col">
 
-    <!-- Navbar -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center gap-3">
-                    <!-- MyGoPen Logo -->
                     <img src="https://ik.imagekit.io/mygopen/menu-logo.png?updatedAt=1767058877480" alt="MyGoPen Logo" class="h-10 w-auto">
                     <span class="font-bold text-xl tracking-tight text-slate-900 hidden sm:block">實用工具集</span>
                 </div>
@@ -67,7 +63,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <div class="relative overflow-hidden pt-16 pb-12 sm:pt-24 sm:pb-16">
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
@@ -79,11 +74,9 @@
         </div>
     </div>
 
-    <!-- Tools Grid -->
     <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 w-full">
         <div id="toolsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             
-            <!-- Tool 1: Cover Generator -->
             <a href="https://cover.showcha.com/" target="_blank" class="tool-card group block bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:border-primary-200 relative overflow-hidden" data-keywords="封面 圖片 fb ig">
                 <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary-50 rounded-full blur-2xl group-hover:bg-primary-100 transition-colors opacity-70"></div>
                 <div class="relative">
@@ -101,7 +94,23 @@
                 </div>
             </a>
 
-            <!-- Tool 2: Grid Tool -->
+            <a href="https://icon.showcha.com/" target="_blank" class="tool-card group block bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:border-primary-200 relative overflow-hidden" data-keywords="Icon 封面 編輯 背景 風格">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary-50 rounded-full blur-2xl group-hover:bg-primary-100 transition-colors opacity-70"></div>
+                <div class="relative">
+                    <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4 text-primary-600 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 group-hover:text-primary-700 transition-colors">Icon 封面編輯器</h3>
+                    <p class="mt-2 text-sm text-slate-500 line-clamp-2">可自訂 Icon，並產出尺寸 1920 x 968 的封面，可點選風格切換背景配色。</p>
+                    <div class="mt-4 flex items-center text-xs font-medium text-primary-600 group-hover:text-primary-700">
+                        立即製作 
+                        <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                </div>
+            </a>
+
             <a href="https://grid.showcha.com/" target="_blank" class="tool-card group block bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:border-primary-200 relative overflow-hidden" data-keywords="九宮格 切圖 ig 排版">
                 <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary-50 rounded-full blur-2xl group-hover:bg-primary-100 transition-colors opacity-70"></div>
                 <div class="relative">
@@ -119,7 +128,6 @@
                 </div>
             </a>
 
-            <!-- Tool 3: Stamp Maker -->
             <a href="https://stamp.showcha.com/" target="_blank" class="tool-card group block bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:border-primary-200 relative overflow-hidden" data-keywords="印章 電子章 浮水印">
                 <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary-50 rounded-full blur-2xl group-hover:bg-primary-100 transition-colors opacity-70"></div>
                 <div class="relative">
@@ -137,7 +145,6 @@
                 </div>
             </a>
 
-            <!-- Tool 4: Anti-Scam (Featured) -->
             <a href="https://antiscam.showcha.com/" target="_blank" class="tool-card group block bg-white rounded-2xl p-6 shadow-md border border-primary-100 hover:border-primary-300 relative overflow-hidden ring-1 ring-primary-50" data-keywords="防詐騙 安全 檢查">
                 <div class="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-primary-100 rounded-full blur-3xl group-hover:bg-primary-200 transition-colors opacity-80"></div>
                 <div class="relative">
@@ -156,7 +163,6 @@
                 </div>
             </a>
 
-            <!-- Tool 5: LINE Bot Statistics -->
             <a href="https://gamebot.app/reports/testreport.asp" target="_blank" class="tool-card group block bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:border-primary-200 relative overflow-hidden" data-keywords="統計 謠言 LINE 機器人 數據">
                 <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary-50 rounded-full blur-2xl group-hover:bg-primary-100 transition-colors opacity-70"></div>
                 <div class="relative">
@@ -174,7 +180,6 @@
                 </div>
             </a>
 
-            <!-- Tool 6: 1-on-1 Chat -->
             <a href="https://admin.mgp.tw/otochat/" target="_blank" class="tool-card group block bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:border-primary-200 relative overflow-hidden" data-keywords="客服 真人 諮詢 對話">
                 <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary-50 rounded-full blur-2xl group-hover:bg-primary-100 transition-colors opacity-70"></div>
                 <div class="relative">
@@ -192,7 +197,6 @@
                 </div>
             </a>
 
-            <!-- Tool 7: TDSDA Report System -->
             <a href="https://netsafer.tw/" target="_blank" class="tool-card group block bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:border-primary-200 relative overflow-hidden" data-keywords="詐騙 舉報 報案 安全 TDSDA">
                 <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary-50 rounded-full blur-2xl group-hover:bg-primary-100 transition-colors opacity-70"></div>
                 <div class="relative">
@@ -210,7 +214,6 @@
                 </div>
             </a>
 
-            <!-- Tool 8: LINE News Button Editor -->
             <a href="https://mygopen.github.io/line-news/" target="_blank" class="tool-card group block bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:border-primary-200 relative overflow-hidden" data-keywords="LINE 新聞 按鈕 編輯 圖片">
                 <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary-50 rounded-full blur-2xl group-hover:bg-primary-100 transition-colors opacity-70"></div>
                 <div class="relative">
@@ -228,7 +231,6 @@
                 </div>
             </a>
 
-             <!-- Placeholder for Future Tools -->
              <div class="border-2 border-dashed border-slate-200 rounded-2xl p-6 flex flex-col items-center justify-center text-center text-slate-400 min-h-[200px] hover:border-primary-200 hover:text-primary-400 transition-colors">
                 <svg class="w-10 h-10 mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
@@ -239,7 +241,6 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-white border-t border-slate-200 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
